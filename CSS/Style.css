@@ -1,0 +1,767 @@
+  /* HTML, BODY */
+
+html, body {
+    border-bottom: 10px;
+    margin: 0;
+    padding: 0;
+    height: 1800px;
+    width: 100%;
+    background-position: center;
+    justify-self: center;
+    overflow-x: hidden;
+    
+  }
+
+  /* HTML, BODY */
+  
+  /* Fontes */
+
+  .micro-5-regular {
+    font-family: "Micro 5", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+
+  .kode-mono-ff {
+    font-family: "Kode Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 521;
+    font-style: normal;
+  }
+  
+
+  /* Fontes */
+
+/* Animation Escrever codigo de aterrisagem */
+
+@keyframes escrever {
+  0% {
+      width: 0;
+  }
+  25% {
+      width: 25%;
+  }
+  50% {
+      width: 50%;
+  }
+  75% {
+      width: 75%;
+  }
+  100% {
+      width: 100%;
+      display: none;
+      opacity: 0;
+
+      transition: all;
+  }
+}
+
+@keyframes fadeOut{
+  0% {
+   opacity: 1;
+   transition: all;
+  }
+  100% {
+    
+    display: none;
+    opacity: 0;
+   
+    transition: all;
+    
+  }
+}
+
+/* Animation Escrever codigo de aterrisagem */
+  
+/* Animation Glitch */
+
+  .glitch {
+    animation: fadeOut 9s steps(100);
+    position: absolute;
+    top: 20%;
+    left: 43%;
+    font-size: 15px;
+    opacity: 1;
+    line-height: 1.2;
+    color: #f6bb33;
+    letter-spacing: 5px;
+    z-index: 1;
+    animation: shift 1s steps(100);
+    transition: all;
+    
+    border-radius: 10px;
+   
+    width: 300px;
+    text-overflow: clip;
+    text-wrap: pretty;
+    
+    text-align: center;
+    align-content: center;
+    font-family: monospace;
+    display: flex;
+    
+    
+  }
+  
+  .glitch:before,
+  .glitch:after {
+ 
+    display: block;
+    content: attr(data-glitch);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: auto;
+    break-after: column;
+   transition: all;
+   
+  }
+  
+  .glitch:before {
+    animation:glitch 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite, escrever 5s steps(200), fadeOut 9s steps(100);;
+    color: #9d4ad9;
+    z-index: -1;
+    text-align: center;
+    border-right: .15em solid orange; /* Simula o cursor de digitação */
+    white-space: normal;
+   overflow: hidden;
+   display: block;
+   transition: all;
+   opacity: 0;
+  }
+  
+  .glitch:after {
+    animation: glitch 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite, escrever 5s steps(200), fadeOut 9s steps(100);;
+    color: #63d3d9;
+    z-index: -2;
+    text-align: center;
+    text-align: center;
+    border-right: .15em solid orange; /* Simula o cursor de digitação */
+    white-space: normal; /* Impede que o texto quebre em várias linhas */
+   overflow: hidden;
+   display: block;
+   transition: all;
+   opacity: 0;
+   
+    
+  }
+
+  
+  
+  @keyframes glitch {
+    0% {
+      transform: translate(0);
+    }
+  
+    20% {
+      transform: translate(-3px, 3px);
+    }
+  
+    40% {
+      transform: translate(-3px, -3px);
+    }
+  
+    60% {
+      transform: translate(3px, 3px);
+    }
+  
+    80% {
+      transform: translate(3px, -3px);
+    }
+  
+    to {
+      transform: translate(0);
+    }
+  }
+
+  
+  
+  @keyframes shift {
+    0%, 40%, 44%, 58%, 61%, 65%, 69%, 73%, 100% {
+      transform: skewX(0deg);
+    }
+  
+    41% {
+      transform: skewX(10deg);
+    }
+  
+    42% {
+      transform: skewX(-10deg);
+    }
+  
+    59% {
+      transform: skewX(40deg) skewY(10deg);
+    }
+  
+    60% {
+      transform: skewX(-40deg) skewY(-10deg);
+    }
+  
+    63% {
+      transform: skewX(10deg) skewY(-5deg);
+    }
+  
+    70% {
+      transform: skewX(-50deg) skewY(-20deg);
+    }
+  
+    71% {
+      transform: skewX(10deg) skewY(-10deg);
+    }
+  }
+  
+/* Animation Glitch */
+
+/* ----------------------------------BACKGROUND IMAGE------------------------------------- */
+  
+  .container {
+    height: 100%; /* Garante que o contêiner ocupe toda a altura da tela */
+    width: 100%;
+    background-image: url(https://i.imgur.com/uOSVn6V.gif); 
+    background-size: cover; /* Garante que a imagem cubra todo o espaço disponível sem distorções */
+    background-position: center; /* Centraliza a imagem */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: -100;
+  }
+
+/* ----------------------------------BACKGROUND IMAGE------------------------------------- */
+
+/* /* ----------------------------------PORTOES/JANELAS/CORTINAS------------------------------------- */ 
+  .gif-container {
+    position: absolute;
+    display: inline-block;
+    position: absolute;
+scale: 0.75;
+top: 600px;
+right: -20px;
+width: 424px; height: 301px;
+display: flex;
+z-index: 1;
+background-size: cover;
+  }
+
+
+
+ .gate-g{
+position: absolute;
+cursor: pointer;
+ }
+
+ .gate-g:active{
+    content:url(https://i.imgur.com/vBLQkCn.gif);
+   
+ }
+
+ .g-component {
+  background-image: url(https://i.imgur.com/tdVCRoO.png);
+ position: absolute;
+   display: block;
+   position: absolute;
+scale: 0.75;
+
+top: 600px;
+right: -68px;
+width: 469px; height: 211px;
+display: flex;
+z-index: 0;
+background-size: cover;
+  
+  
+}
+
+.g-component-2 {
+ background-image: url(https://i.imgur.com/tdVCRoO.png);
+ position: absolute;
+ display: block;
+ position: absolute;
+ scale: 0.75;
+ top: 1115px;
+ right: -60px;
+ width: 349px;
+ height: 211px;
+ display: flex;
+ z-index: 0;
+ background-size: cover;
+}
+
+
+.g-overlay {
+background-image: url(https://i.imgur.com/vBLQkCn.gif);
+position: absolute;
+display: none;
+position: absolute;
+scale: 0.75;
+top: 595px;
+right: -68px;
+width: 469px; height: 211px;
+display: flex;
+z-index: -1;
+background-size: cover;
+
+  
+}
+
+
+
+.g-overlay-2 {
+ background-image: url(https://i.imgur.com/vBLQkCn.gif);
+ position: absolute;
+ display: none;
+ scale: 0.75;
+ top: 1115px;
+ right: -60px;
+ width: 349px;
+ height: 211px;
+ display: flex;
+ z-index: -1;
+ background-size: cover;
+}
+  
+
+
+#gate-on{
+  
+  transform: translate(-50%, -50%) scale(0.2); /* Move a janela de volta para o centro da tela e escala inicial zero */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  padding: 20px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+transition: transform 0.5s ease; /* Transição suave de transformação */
+display: none;
+
+}
+
+#gate-off{
+  opacity: 0;
+display: none;
+
+}
+
+
+/* testes */
+
+.gate {
+  width: 469px;
+  height: 211px;
+  z-index: 1000;
+  cursor: crosshair;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.5s ease; /* Transição suave de transformação */
+  display: none;
+
+}
+
+
+#gate-on.active {
+  background-color: white;
+  transform: translate(-50%, -50%) scale(1); /* Escala para 1 (normal) */
+  display: flex;
+  
+
+}
+
+.gate-off.active {
+  opacity: 0;
+  display: none;
+}
+
+
+.g-container:active #gate-off{
+ opacity: 0 ;
+ display: none;
+}
+
+
+.g-container:active #g-component {
+  opacity: 1;
+  background-image: url(https://i.imgur.com/vBLQkCn.gif);
+   /* Escala para 1 (normal) */
+  
+  
+}
+
+.g-container-2:active #gate-off-2{
+ opacity: 0 ;
+ display: none;
+}
+
+
+.g-container-2:active #g-component-2 {
+  opacity: 1;
+  background-image: url(https://i.imgur.com/vBLQkCn.gif);
+   /* Escala para 1 (normal) */
+  
+  
+}
+
+.gate-off-2.active{
+opacity: 0;
+display: none;
+}
+
+ /* /* ----------------------------------PORTOES/JANELAS------------------------------------- */ 
+
+ /* /* ----------------------------------ENTRADA DO USUARIO/HELICOPTERO------------------------------------- */ 
+
+ .helicoptero{
+    position:relative;
+    top: -2px;
+    mix-blend-mode: color-dodge;
+    
+    
+    
+    
+ }
+
+ .entrada{
+    justify-self: center;
+    position:relative;
+   justify-content: center;
+    z-index: 0;
+    top: -42.5%; 
+    display: inline-block;
+  
+    
+ }
+ 
+ /* /* ----------------------------------ENTRADA DO USUARIO/HELICOPTERO------------------------------------- */ 
+
+
+ 
+ 
+
+  /* Estilos para o componente */
+.component {
+  width: 50px;
+  height: 80px;
+
+  top: 240px;
+  right: 300px;
+   position: absolute;
+   scale: 1.3;
+   z-index: 1000;
+   
+  
+
+
+ }
+
+ .component-2{
+  align-self: center;
+  width: 100px;
+  height: 80px;
+  
+  top: 555px; 
+  left: 950px;
+  position: absolute;
+
+  scale: 0.8;
+ 
+  z-index: 1000;
+  
+ 
+
+ }
+ .cidade{
+  position: relative;
+  
+  text-align: center;
+  z-index: 1000;
+  border-radius: 10px;
+  background-color: rgba(249, 196, 97, 0.267);
+  border-style: dashed;
+}
+ 
+  /* /* ----------------------------------BOTAO DE INTERACAO------------------------------------- */ 
+
+ .glowbutton {
+   --glow-color: #f7c111bb;
+   --glow-spread-color: rgba(246, 232, 160, 0.342);
+   --enhanced-glow-color: rgb(58, 55, 8);
+   --btn-color: rgba(225, 157, 54, 0.457);
+   border: 0.25em solid var(--glow-color);
+   padding: 1em 3em;
+   color: var(--glow-color);
+   font-size: 15px;
+   font-weight: bold;
+   background-color: var(--btn-color);
+   border-radius: 1em;
+   outline: none;
+   box-shadow: 0 0 1em 0.25em var(--glow-color),
+     0 0 4em 1em var(--glow-spread-color),
+     inset 0 0 0.75em 0.25em var(--glow-color);
+   text-shadow: 0 0 0.5em var(--glow-color);
+   position: absolute;
+   transition: all 0.3s;
+   width:auto;
+   white-space: nowrap;
+   
+ }
+
+ 
+ .glowbutton::after {
+   pointer-events: none;
+   content: "";
+   position: absolute;
+   top: 120%;
+   left: 0;
+   height: 100%;
+   width: 100%;
+   background-color: var(--glow-spread-color);
+   filter: blur(2em);
+   opacity: 0.7;
+   transform: perspective(1.5em) rotateX(35deg) scale(1, 0.6);
+   
+ }
+ 
+ .glowbutton:hover {
+   color: var(--btn-color);
+   background-color: var(--glow-color);
+   box-shadow: 0 0 1em 0.25em var(--glow-color),
+     0 0 4em 2em var(--glow-spread-color),
+     inset 0 0 0.75em 0.25em var(--glow-color);
+ }
+ 
+ .glowbutton:active {
+   box-shadow: 0 0 0.6em 0.25em var(--glow-color),
+     0 0 2.5em 2em var(--glow-spread-color),
+     inset 0 0 0.5em 0.25em var(--glow-color);
+ }
+ 
+  /* /* ----------------------------------BOTAO DE INTERACAO------------------------------------- */ 
+ 
+  /* /* ----------------------------------"POPUPS, JANELAS DE CONTEUDO------------------------------------- */ 
+ .overlay {
+   display: none;
+   opacity: 0;
+   transition: opacity 1s ease;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.658); /* Fundo um pouco borrado */
+   z-index: 999;
+   
+}
+
+
+
+
+
+ 
+ 
+
+ #window{
+   
+   transform: translate(-50%, -50%) scale(0.2); /* Move a janela de volta para o centro da tela e escala inicial zero */
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   padding: 20px;
+transition: transform 0.5s ease; /* Transição suave de transformação */
+display: none;
+  width: 400px;
+  height: 400px;
+  border-radius: 30px;
+  background: rgba(211, 211, 211, 0.363);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 50px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset;
+
+  background-color: rgba(247, 201, 149, 0.763);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+border-color: rgba(0, 0, 0, 0.272);
+border-width: 3px;
+border-style: solid;
+
+border-color: rgba(0, 0, 0, 0.463);
+border-width: 5px;
+border-style: outset;
+
+
+
+ }
+
+
+ 
+
+ #window-2{
+   transform: translate(-50%, -50%) scale(0.2); /* Move a janela de volta para o centro da tela e escala inicial zero */
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   padding: 20px;
+transition: transform 0.5s ease; /* Transição suave de transformação */
+display: none;
+  width: 400px;
+  height: 400px;
+  border-radius: 30px;
+  background: rgba(211, 211, 211, 0.363);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 50px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset;
+
+  background-color: rgba(247, 201, 149, 0.763);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+border-color: rgba(0, 0, 0, 0.272);
+border-width: 3px;
+border-style: solid;
+
+border-color: rgba(0, 0, 0, 0.463);
+border-width: 5px;
+border-style: outset;
+ }
+ 
+
+ /* testes */
+
+ .window {
+   width: 360px;
+   height: 360px;
+   z-index: 1000;
+   cursor: crosshair;
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   padding: 20px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+   transition: transform 0.5s ease; /* Transição suave de transformação */
+   display: none;
+ 
+}
+
+#window.active {
+   
+  transform: translate(-50%, -50%) scale(1.4); /* Escala para 1 (normal) */
+  display: block;
+  opacity: 1;
+  backface-visibility: hidden;
+
+  background-color: rgba(247, 201, 149, 0.763);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+border-color: rgba(0, 0, 0, 0.272);
+border-width: 3px;
+border-style: solid;
+
+border-color: rgba(0, 0, 0, 0.463);
+border-width: 5px;
+border-style: outset;
+
+}
+
+#window-2.active {
+  
+ 
+ transform: translate(-50%, -50%) scale(1.4); /* Escala para 1 (normal) */
+ display: block;
+ opacity: 1;
+ backface-visibility: hidden;
+
+ background-color: rgba(247, 201, 149, 0.763);
+ background-attachment: fixed;
+ background-repeat: no-repeat;
+ background-size: cover;
+ 
+border-color: rgba(0, 0, 0, 0.272);
+border-width: 3px;
+border-style: solid;
+
+border-color: rgba(0, 0, 0, 0.463);
+border-width: 5px;
+border-style: outset;
+
+}
+
+
+
+.container-popup:active #window {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1); /* Escala para 1 (normal) */
+  
+
+}
+
+
+.container-popup:active #window-2 {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1); /* Escala para 1 (normal) */
+  
+  
+}
+
+
+.container-popup:active .overlay {
+  opacity: 1; /* Opacidade total quando o mouse passa sobre o componente */
+  
+}
+
+ /* /* ----------------------------------"POPUPS, JANELAS DE CONTEUDO------------------------------------- */ 
+
+  /* /* ----------------------------------PARAGRAFOS------------------------------------- */ 
+
+p {
+  overflow-y: scroll;
+  width: 360px;
+  height: 360px;
+  text-align: center;
+  position:absolute;
+  align-self: center;
+  justify-content: center;
+  left: +10%;
+  font-family:monospace;
+
+}
+
+
+  /* /* ----------------------------------PARAGRAFOS------------------------------------- */ 
+
+
+
+  /* /* ----------------------------------BARRA DE ROLAGEM------------------------------------- */ 
+::-moz-scrollbar {
+  width: 10px; /* largura da barra de rolagem */
+}
+
+::-webkit-scrollbar{
+  width: 8px;
+}
+
+::-webkit-scrollbar-track{
+color: rgba(255, 160, 122, 0);
+}
+
+::-webkit-scrollbar-thumb{
+  color: #000;
+}
+
+::-moz-scrollbar-thumb:hover {
+  background: #ffffff; /* cor da alça da barra de rolagem ao passar o mouse */
+}
+
+  /* /* ----------------------------------BARRA DE ROLAGEM------------------------------------- */ 
+
+
+
+ 
+ 
+
+ 
+
+
+  
