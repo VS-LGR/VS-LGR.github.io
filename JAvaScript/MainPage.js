@@ -4,3 +4,9 @@ function expandTextarea(element) {
   
 }
 // Expandir texto ----
+
+function expandInfo(element){
+  element.classList.toggle("expandInfo");
+  
+}
+
