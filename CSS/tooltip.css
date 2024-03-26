@@ -1,33 +1,92 @@
+
+
+
+
 .tooltip {
     position: absolute;
     
     cursor: pointer;
     font-family: "Arial", sans-serif;
-    top: 50%;
-    left: 50%;
+    top: 9.6%;
+    left: 21.7%;
   }
+
+
+
+  .tooltip-2 {
+    position: absolute;
+    
+    cursor: pointer;
+    font-family: "Arial", sans-serif;
+    top: 38.99%;
+    left: 73.25%;
+  }
+
+
+
+
+  .tooltip-3 {
+    position: absolute;
+    
+    cursor: pointer;
+    font-family: "Arial", sans-serif;
+    top: 48.88%;
+    left: 46.99%;
+  }
+
+
+
+
+  .tooltip-4 {
+    position: absolute;
+    
+    cursor: pointer;
+    font-family: "Arial", sans-serif;
+    top: 71.6%;
+    left: 31.7%;
+  }
+
   
-  .tooltip:hover .tooltiptext {
+  .tooltip:hover .tooltiptext, .tooltip-2:hover .tooltiptext, .tooltip-3:hover .tooltiptext, .tooltip-4:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
   }
   
   .tooltiptext {
     visibility: hidden;
-    width: 12vw;
-    background-color: #333;
+    width: auto;
+    background-color: #d8842aa2;
     color: #fff;
     text-align: center;
-    border-radius: 0.05vb;
+    border-radius: 1vw;
     padding: 0.5vw;
     position: absolute;
     z-index: 1;
-    top: 125%;
-    left: 20%;
+    top: 109%;
+    left: 242%;
     margin-left: -6.1vw;
     opacity: 0;
     transition: opacity 0.3s;
+    border-width: 1vw;
+    border-color: #673d0ea2;
+    text-wrap: nowrap;
     
+  }
+
+  .tooltip-3 .tooltiptext{
+    top: 100%;
+    left: 304%;
+  }
+
+  
+  .tooltip-2 .tooltiptext{
+
+    left: 230%;
+  }
+  
+
+  .tooltip-4 .tooltiptext{
+    left: 116%;
   }
   
   .tooltiptext::after {
@@ -41,7 +100,7 @@
     border-color: transparent transparent #333 transparent;
   }
   
-  .tooltip .icon {
+   .icon {
     display: inline-block;
     width: 1.2vw;
     height: 2.2vh;
@@ -62,22 +121,22 @@
   .text-tt {
     position: relative;
     color: white;
-    left: 0.35vw;
-    bottom: -2vh;
+    left: 0.29vw;
+    bottom: -2.3vh;
     text-size-adjust: auto;
   }
  
-  @media only screen and (max-width: 768px){
+  @media only screen and (max-width: 767px){
     .text-tt{
         position: relative;
         color: white;
         left: 0.35vw;
-        bottom: -2.65vh;
+        bottom:  -2.415vh;
         text-size-adjust: auto;
-        scale: 0.4;
+        scale: 0.38;
     }
 
-    .tooltip .icon {
+    .icon {
         display: inline-block;
         width: 4vw;
         height: 2.2vh;
@@ -93,5 +152,539 @@
         opacity: 0.5;
        
         
+        
       }
+
+      .tooltiptext {
+        visibility: hidden;
+        width: auto;
+        background-color: #d8842aa2;
+        color: #fff;
+        text-align: center;
+        border-radius: 0.05vb;
+        padding: 0.5vw;
+        position: absolute;
+        z-index: 1;
+        top: 65%;
+        left: -78%;
+        margin-left: -6.1vw;
+        opacity: 0;
+        transition: opacity 0.3s;
+        scale: 0.3;
+        text-wrap: nowrap;
+        border-radius: 3vw;
+        border-width: 1vw;
+    border-color: #673d0ea2;
+      }
+
+
+      .tooltip {
+        position: absolute;
+        
+        cursor: pointer;
+        font-family: "Arial", sans-serif;
+        top: 7.6%;
+        left: 21.03%;
+      }
+
+      .tooltip .tooltiptext{
+        left: -190%
+      }
+
+      .tooltip-2 .tooltiptext{
+        left: -213%;
+      }
+
+      .tooltip-3 .tooltiptext{
+        top: 67%;
+        left: -97%;
+      }
+
+      .tooltip-4 .tooltiptext{
+        left: -364%;
+      }
+    
+    
+    
+      .tooltip-2 {
+        position: absolute;
+        
+        cursor: pointer;
+        font-family: "Arial", sans-serif;
+        top: 37.4%;
+        left: 72.61%;
+      }
+    
+    
+    
+    
+      .tooltip-3 {
+        position: absolute;
+        
+        cursor: pointer;
+        font-family: "Arial", sans-serif;
+        top: 47.8%;
+        left: 46.37%;
+      }
+    
+    
+    
+    
+      .tooltip-4 {
+        position: absolute;
+        
+        cursor: pointer;
+        font-family: "Arial", sans-serif;
+        top: 69.8%;
+        left: 31.4%;
+      }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 819px) {
+    .text-tt{
+      position: relative;
+      color: white;
+      left: 0.5vw;
+      bottom: -1.95vh;
+      text-size-adjust: auto;
+      scale: 0.58;
+  }
+
+ .icon {
+    display: inline-block;
+    width: 2.8vw;
+    height: 2vh;
+    background-color: #4caf50;
+    color: #000000;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 2.2vb;
+    filter: brightness(150%) blur(0.3vw);
+    z-index: -5;
+    scale: 0.8;
+    opacity: 0.5;
+      
+      
+    }
+
+    .tooltiptext {
+      visibility: hidden;
+      width: auto;
+      background-color: #d8842aa2;
+      color: #fff;
+      text-align: center;
+      border-radius: 0.05vb;
+      padding: 0.5vw;
+      position: absolute;
+      z-index: 1;
+      top: 69%;
+      left: 64%;
+      margin-left: -6.1vw;
+      opacity: 0;
+      transition: opacity 0.3s;
+      scale: 0.5;
+      text-wrap: nowrap;
+      border-radius: 1vw;
+      border-width: 1vw;
+    border-color: #673d0ea2;
+    }
+
+    .tooltip {
+      position: absolute;
+      
+      cursor: pointer;
+      font-family: "Arial", sans-serif;
+      top: 8.6%;
+      left: 21.1%;
+    }
+
+    
+  
+  
+    .tooltip-2 {
+      position: absolute;
+      
+      cursor: pointer;
+      font-family: "Arial", sans-serif;
+      top: 38.4%;
+      left: 72.55%;
+    }
+  
+  
+  
+  
+    .tooltip-3 {
+      position: absolute;
+      
+      cursor: pointer;
+      font-family: "Arial", sans-serif;
+      top: 48.2%;
+      left: 46.42%;
+    }
+  
+  
+  
+  
+    .tooltip-4 {
+      position: absolute;
+      
+      cursor: pointer;
+      font-family: "Arial", sans-serif;
+      top: 70.99%;
+      left: 31.455%;
+    }
+
+    .tooltip .tooltiptext{
+      top: 74%;
+      left: -4%;
+    }
+
+    .tooltip-2 .tooltiptext{
+      left: -34%;
+    }
+
+    .tooltip-3 .tooltiptext{
+      left: 55%;
+    }
+
+    .tooltip-4 .tooltiptext{
+      left: -129%
+    }
+  
+  }
+
+  @media screen and (min-width: 820px) and (max-width: 1024px) {
+    .text-tt{
+      position: relative;
+      color: white;
+      left: 0.5vw;
+      bottom: -1.95vh;
+      text-size-adjust: auto;
+      scale: 0.58;
+  }
+
+ .icon {
+    display: inline-block;
+    width: 2.8vw;
+    height: 2vh;
+    background-color: #4caf50;
+    color: #000000;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 2.2vb;
+    filter: brightness(150%) blur(0.3vw);
+    z-index: -5;
+    scale: 0.8;
+    opacity: 0.5;
+      
+      
+    }
+
+    .tooltiptext {
+      visibility: hidden;
+      width: auto;
+      background-color: #d8842aa2;
+      color: #fff;
+      text-align: center;
+      border-radius: 0.05vb;
+      padding: 0.5vw;
+      position: absolute;
+      z-index: 1;
+      top: 69%;
+      left: 64%;
+      margin-left: -6.1vw;
+      opacity: 0;
+      transition: opacity 0.3s;
+      scale: 0.5;
+      text-wrap: nowrap;
+      border-radius: 1vw;
+      border-width: 1vw;
+    border-color: #673d0ea2;
+    }
+
+    .tooltip {
+      position: absolute;
+      
+      cursor: pointer;
+      font-family: "Arial", sans-serif;
+      top: 10.3%;
+    left: 21.64%;
+    }
+
+    
+  
+  
+    .tooltip-2 {
+      position: absolute;
+      
+      cursor: pointer;
+      font-family: "Arial", sans-serif;
+      top: 40.4%;
+      left: 73.25%;
+    }
+  
+  
+  
+  
+    .tooltip-3 {
+      position: absolute;
+      
+      cursor: pointer;
+      font-family: "Arial", sans-serif;
+      top: 50.2%;
+      left: 47%;
+    }
+  
+  
+  
+  
+    .tooltip-4 {
+      position: absolute;
+      
+      cursor: pointer;
+      font-family: "Arial", sans-serif;
+      top: 70.99%;
+      left: 31.455%;
+    }
+
+    .tooltip .tooltiptext{
+      top: 74%;
+      left: -4%;
+    }
+
+    .tooltip-2 .tooltiptext{
+      left: -34%;
+    }
+
+    .tooltip-3 .tooltiptext{
+      left: 55%;
+    }
+
+    .tooltip-4 .tooltiptext{
+      left: -129%
+    }
+  
+  }
+
+  @media screen and (min-width: 1025px) and (max-width: 1240px) {
+  
+    .text-tt{
+      position: relative;
+      color: white;
+      left: 0.2vw;
+      bottom: -2.95vh;
+      text-size-adjust: auto;
+      scale: 0.58;
+  }
+
+  .icon {
+    display: inline-block;
+    width: 1.5vw;
+    height: 2.5vh;
+    background-color: #4caf50;
+    color: #000000;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 2.2vb;
+    filter: brightness(150%) blur(0.3vw);
+    z-index: -5;
+    scale: 0.8;
+    opacity: 0.5;
+      
+      
+    }
+
+    .tooltiptext {
+      visibility: hidden;
+      width: auto;
+      background-color: #d8842aa2;
+      color: #fff;
+      text-align: center;
+      border-radius: 0.05vb;
+      padding: 0.5vw;
+      position: absolute;
+      z-index: 1;
+      top: 69%;
+      left: 168%;
+      margin-left: -6.1vw;
+      opacity: 0;
+      transition: opacity 0.3s;
+      scale: 0.5;
+      text-wrap: nowrap;
+      border-radius: 1vw;
+      border-width: 1vw;
+    border-color: #673d0ea2;
+    }
+
+
+
+
+
+
+    .tooltip {
+      position: absolute;
+      
+      cursor: pointer;
+      font-family: "Arial", sans-serif;
+      top: 9.6%;
+      left: 21.7%;
+    }
+  
+  
+  
+    .tooltip-2 {
+      position: absolute;
+      
+      cursor: pointer;
+      font-family: "Arial", sans-serif;
+      top: 38.99%;
+      left: 73.25%;
+    }
+  
+  
+  
+  
+    .tooltip-3 {
+      position: absolute;
+      
+      cursor: pointer;
+      font-family: "Arial", sans-serif;
+      top: 48.88%;
+      left: 46.99%;
+    }
+  
+  
+  
+  
+    .tooltip-4 {
+      position: absolute;
+      
+      cursor: pointer;
+      font-family: "Arial", sans-serif;
+      top: 71.6%;
+      left: 31.7%;
+    }
+
+    
+  }
+
+
+
+  @media screen and (min-width: 1041px) and (max-width: 1280px) {
+  
+    .text-tt{
+      position: relative;
+      color: white;
+      left: 0.23555vw;
+      bottom: -2.58vh;
+      
+      text-size-adjust: auto;
+      scale: 0.58;
+  }
+
+  .icon {
+    display: inline-block;
+    width: 1.5vw;
+    height: 2.5vh;
+    background-color: #4caf50;
+    color: #000000;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 2.2vb;
+    filter: brightness(150%) blur(0.3vw);
+    z-index: -5;
+    scale: 0.8;
+    opacity: 0.5;
+      
+      
+    }
+
+    .tooltiptext {
+      visibility: hidden;
+      width: auto;
+      background-color: #d8842aa2;
+      color: #fff;
+      text-align: center;
+      border-radius: 0.05vb;
+      padding: 0.5vw;
+      position: absolute;
+      z-index: 1;
+      top: 69%;
+      left: 168%;
+      margin-left: -6.1vw;
+      opacity: 0;
+      transition: opacity 0.3s;
+      scale: 0.5;
+      text-wrap: nowrap;
+      border-radius: 1vw;
+      border-width: 1vw;
+    border-color: #673d0ea2;
+    }
+
+
+
+
+
+
+    .tooltip {
+      position: absolute;
+      
+      cursor: pointer;
+      font-family: "Arial", sans-serif;
+      top: 9.6%;
+      left: 21.7%;
+    }
+  
+  
+  
+    .tooltip-2 {
+      position: absolute;
+      
+      cursor: pointer;
+      font-family: "Arial", sans-serif;
+      top: 38.99%;
+      left: 73.25%;
+    }
+  
+  
+  
+  
+    .tooltip-3 {
+      position: absolute;
+      
+      cursor: pointer;
+      font-family: "Arial", sans-serif;
+      top: 48.88%;
+      left: 46.99%;
+    }
+  
+  
+  
+  
+    .tooltip-4 {
+      position: absolute;
+      
+      cursor: pointer;
+      font-family: "Arial", sans-serif;
+      top: 71.6%;
+      left: 31.7%;
+    }
+
+    .tooltip .tooltiptext{
+   
+      left: 136%;
+    }
+
+    .tooltip-2 .tooltiptext{
+      left: 121%;
+    }
+
+    .tooltip-3 .tooltiptext{
+      left: 207.3%;
+      top:75%;
+    }
+
+    .tooltip-4 .tooltiptext{
+      left: 4.5%;
+    }
   }
